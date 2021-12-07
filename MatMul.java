@@ -1,3 +1,8 @@
+/*
+    Author : Benjamin Joseph
+    Date : 07-12-2021
+*/
+
 package Lab21;
 
 import java.util.Scanner;
@@ -7,7 +12,7 @@ public class MatMul {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		
+
 		//First Matrix
 		int row1,col1;
 		System.out.print("Enter the number of rows of first matrix: ");
@@ -17,7 +22,7 @@ public class MatMul {
 		int[][] matrix1 = new int[row1][col1];
 		System.out.println("Enter "+(row1*col1)+" elements of the first matrix:");
 		matrix1 = MatrixInput(row1,col1,matrix1);
-		
+
 		//Second Matrix
 		int row2,col2;
 		System.out.print("Enter the number of rows of second matrix: ");
@@ -27,7 +32,7 @@ public class MatMul {
 		System.out.println("Enter "+(row2*col2)+" elements of the second matrix:");
 		int [][] matrix2 = new int[row2][col2];
 		matrix2 = MatrixInput(row2,col2,matrix2);
-		
+
 		//Matrix Multiplication Algorithm
 		if(col1 == row2)
 		{
@@ -48,7 +53,7 @@ public class MatMul {
 		}
 		sc.close();
 	}
-	
+
 	//Function for reading the matrices
 	public static int[][] MatrixInput(int row, int col, int[][] mat)
 	{
@@ -62,7 +67,7 @@ public class MatMul {
 		}
 		return mat;
 	}
-	
+
 	//Function for printing the matrices
 	public static void MatrixDisplay(int row, int col, int[][] mat)
 	{

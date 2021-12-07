@@ -1,3 +1,8 @@
+/*
+    Author : Benjamin Joseph
+    Date : 07-12-2021
+*/
+
 package Lab21;
 
 import java.util.Scanner;
@@ -8,11 +13,11 @@ class Employee{
 	int phone;
 	String address;
 	int salary;
-	
+
 	public void printSalary() {
 		System.out.println("Salary of the employee = "+salary);
 	}
-	
+
 }
 
 class Officer extends Employee{
@@ -42,7 +47,7 @@ public class Official {
 		off.salary = sc.nextInt();
 		System.out.println("Enter the specialization of the officer: ");
 		off.specialization = sc.nextLine();
-		
+
 		System.out.println("Enter the name of the manager: ");
 		man.name = sc.nextLine();
 		System.out.println("Enter the age of the manager: ");

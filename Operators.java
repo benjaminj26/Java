@@ -1,3 +1,8 @@
+/*
+    Author : Benjamin Joseph
+    Date : 07-12-2021
+*/
+
 package Lab21;
 
 import java.util.Scanner;
@@ -17,5 +22,5 @@ public class Operators {
 		quotient = num1/num2;
 		System.out.println("Sum="+sum+"\nDifference="+difference+"\nProduct="+product+"\nQuotient="+quotient);
 		sc.close();
-	}	
+	}
 }

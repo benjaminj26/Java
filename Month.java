@@ -1,3 +1,8 @@
+/*
+    Author : Benjamin Joseph
+    Date : 07-12-2021
+*/
+
 package Lab21;
 
 import java.util.Scanner;
@@ -35,7 +40,7 @@ public class Month {
 			break;
 			case 12: System.out.println("December");
 			break;
-			default: System.out.println("Invalid Input"); 
+			default: System.out.println("Invalid Input");
 		}
 		sc.close();
 	}
