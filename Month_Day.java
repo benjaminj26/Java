@@ -51,8 +51,6 @@ public class Month_Day {
 				case "september": System.out.println("30");
 				case "november": System.out.println("30");
 				break;
-
-
 				default:System.out.println("Invalid Input");
 			}
 		}
