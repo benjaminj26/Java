@@ -1,3 +1,5 @@
+package Lab21;
+
 import java.util.Scanner;
 
 public class Vowels
