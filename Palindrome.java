@@ -1,3 +1,8 @@
+/*
+    Author : Benjamin Joseph
+    Date : 07-12-2021
+*/
+
 package Lab21;
 
 import java.util.Scanner;
@@ -10,6 +15,7 @@ public class Palindrome {
 		String str;
 		System.out.println("Enter a string: ");
 		str = sc.next();
+		str=str.toLowerCase();
 		String rev="";
 		for(int i=0; i<str.length(); ++i)
 		{
