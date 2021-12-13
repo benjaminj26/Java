@@ -1,51 +1,84 @@
-package Lab21;
+// package Lab21;
 
 import java.util.Scanner;
 
-class Person
-{
-    String name, gender;
-    int age;
+class Employee{
+	String name;
+	int age;
+	int phone;
+	String address;
+	int salary;
+
+	public void printSalary() {
+		System.out.println("Salary: "+salary);
+	}
+
 }
 
-class Employee extends Person
-{
-    String department;
-    int empid;
-
-    Employee(String name, int age, String gender, String department, int empid)
-    {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.department = department;
-        this.empid = empid;
-    }
-    void show()
-    {
-        System.out.println("Name: "+name+"\nAge: "+age+"\nGender: "+gender+"\nDepartment: "+department+"\nEmployee ID: "+empid);
-    }
+class Officer extends Employee{
+	String specialization;
 }
 
-public class Inheritance
-{
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
-        String name, gender, department;
-        int age, empid;
-        System.out.print("Name: ");
-        name = sc.nextLine();
-        System.out.print("Age: ");
-        age = sc.nextInt();
-        System.out.print("Gender: ");
-        char ch = sc.next().charAt(0);
-        gender = sc.nextLine();
-        System.out.print("Department: ");
-        department = sc.nextLine();
-        System.out.print("Employee ID: ");
-        empid = sc.nextInt();
-        Employee emp = new Employee(name,age,gender,department,empid);
-        emp.show();
-    }
+class Manager extends Employee{
+	String department;
+}
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		Officer off = new Officer();
+		Manager man = new Manager();
+		System.out.print("Enter the name of the officer: ");
+		off.name = sc.nextLine();
+		System.out.print("Enter the age of the officer: ");
+		off.age = sc.nextInt();
+		System.out.print("Enter the phone number of the officer: ");
+		off.phone = sc.nextInt();
+		System.out.print("Enter the address of the officer: ");
+		sc.nextLine();
+		off.address = sc.nextLine();
+		System.out.print("Enter the salary of the officer: ");
+		off.salary = sc.nextInt();
+		System.out.print("Enter the specialization of the officer: ");
+		sc.nextLine();
+		off.specialization = sc.nextLine();
+
+		System.out.println();
+		System.out.print("Enter the name of the manager: ");
+		man.name = sc.nextLine();
+		System.out.print("Enter the age of the manager: ");
+		man.age = sc.nextInt();
+		System.out.print("Enter the phone number of the manager: ");
+		man.phone = sc.nextInt();
+		System.out.print("Enter the address of the manager: ");
+		sc.nextLine();
+		man.address = sc.nextLine();
+		System.out.print("Enter the salary of the manager: ");
+		man.salary = sc.nextInt();
+		System.out.print("Enter the department of the manager: ");
+		sc.nextLine();
+		man.department = sc.nextLine();
+
+		System.out.println();
+		System.out.println("Details of the Officer");
+		System.out.println("Name: "+off.name);
+		System.out.println("Age: "+off.age);
+		System.out.println("Phone Number: "+off.phone);
+		System.out.println("Address: "+off.address);
+		off.printSalary();
+		System.out.println("Specialization: "+off.specialization);
+
+		System.out.println();
+		System.out.println("Details of Manager");
+		System.out.println("Name: "+man.name);
+		System.out.println("Age: "+man.age);
+		System.out.println("Phone Number: "+man.phone);
+		System.out.println("Address: "+man.address);
+		man.printSalary();
+		System.out.println("Department: "+man.department);
+		sc.close();
+	}
+
 }
