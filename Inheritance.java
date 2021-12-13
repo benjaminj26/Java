@@ -1,4 +1,4 @@
-// package Lab21;
+package Lab21;
 
 import java.util.Scanner;
 
