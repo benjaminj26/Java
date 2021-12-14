@@ -9,7 +9,7 @@ public class Month_Day {
 		int year;
 		System.out.println("Enter the name of the month: ");
 		month = sc.next();
-		month.toLowerCase();
+		month = month.toLowerCase();
 		System.out.println("Input the year: ");
 		year = sc.nextInt();
 		if(isLeapYear(year))
