@@ -43,7 +43,7 @@ public class MatMul {
 				}
 			}
 			//Printing the product matrix
-			System.out.println("The sum of the two matrices is:");
+			System.out.println("The product of the two matrices is:");
 			MatrixDisplay(row1,col2,matrix3);
 		}
 		sc.close();
