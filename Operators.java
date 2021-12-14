@@ -1,4 +1,4 @@
-package Lab21;
+package Java;
 
 import java.util.Scanner;
 
@@ -17,5 +17,5 @@ public class Operators {
 		quotient = num1/num2;
 		System.out.println("Sum="+sum+"\nDifference="+difference+"\nProduct="+product+"\nQuotient="+quotient);
 		sc.close();
-	}	
+	}
 }

@@ -1,4 +1,4 @@
-package Lab21;
+package Java;
 
 import java.util.Scanner;
 
@@ -27,15 +27,15 @@ public class Area {
 		System.out.println("Area of the circle = "+(area(radius)));
 		sc.close();
 	}
-	
+
 	static float area(float base, float height) {
 		return ((base*height)/2);
 	}
-	
+
 	static int area(int length, int breadth) {
 		return (length*breadth);
 	}
-	
+
 	static float area(float radius) {
 		return ((22f/7f)*radius*radius);
 	}

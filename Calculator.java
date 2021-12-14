@@ -1,4 +1,4 @@
-package Lab21;
+package Java;
 
 public class Calculator
 {

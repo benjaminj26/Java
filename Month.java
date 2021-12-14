@@ -1,4 +1,4 @@
-package Lab21;
+package Java;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class Month {
 			break;
 			case 12: System.out.println("December");
 			break;
-			default: System.out.println("Invalid Input"); 
+			default: System.out.println("Invalid Input");
 		}
 		sc.close();
 	}
