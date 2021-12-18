@@ -9,7 +9,7 @@ public class Attendance {
 		Scanner sc = new Scanner(System.in);
 		String name;
 		System.out.println("Enter your name: ");
-		name = sc.next();
+		name = sc.nextLine();
 		int att_perc;
 		System.out.println("Input your attendance percentage: ");
 		att_perc = sc.nextInt();

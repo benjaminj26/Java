@@ -11,9 +11,9 @@ public class Area {
 		float base,height,radius;
 		//Triangle
 		System.out.print("Input the base length of the triangle: ");
-		base = sc.nextInt();
+		base = sc.nextFloat();
 		System.out.print("Input the height of the triangle: ");
-		height = sc.nextInt();
+		height = sc.nextFloat();
 		System.out.println("Area of triangle = "+(area(base,height)));
 		//Rectangle
 		System.out.print("Input the length of the rectangle: ");
@@ -23,7 +23,7 @@ public class Area {
 		System.out.println("Area of the rectangle = "+(area(length, breadth)));
 		//Circle
 		System.out.print("Input the radius of the circle: ");
-		radius = sc.nextInt();
+		radius = sc.nextFloat();
 		System.out.println("Area of the circle = "+(area(radius)));
 		sc.close();
 	}

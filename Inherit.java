@@ -39,7 +39,7 @@ public class Inherit
         System.out.print("Age: ");
         age = sc.nextInt();
         System.out.print("Gender: ");
-        char ch = sc.next().charAt(0);
+        sc.nextLine();
         gender = sc.nextLine();
         System.out.print("Department: ");
         department = sc.nextLine();

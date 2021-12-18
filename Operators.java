@@ -7,9 +7,9 @@ public class Operators {
 		float num1,num2;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Input the first number: ");
-		num1 = sc.nextInt();
+		num1 = sc.nextFloat();
 		System.out.println("Input the second number: ");
-		num2 = sc.nextInt();
+		num2 = sc.nextFloat();
 		float sum, difference, product,quotient;
 		sum = num1+num2;
 		difference = num1-num2;

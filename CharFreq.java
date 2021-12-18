@@ -9,7 +9,7 @@ public class CharFreq {
 		Scanner sc = new Scanner(System.in);
 		String str;
 		System.out.println("Enter a string: ");
-		str = sc.next();
+		str = sc.nextLine();
 		System.out.println("Enter the character whose frequency you want to find:");
 		char ch = sc.next().charAt(0);
 		int frequency=0;

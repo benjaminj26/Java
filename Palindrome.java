@@ -14,7 +14,7 @@ public class Palindrome {
 		Scanner sc = new Scanner(System.in);
 		String str;
 		System.out.println("Enter a string: ");
-		str = sc.next();
+		str = sc.nextLine();
 		str=str.toLowerCase();
 		String rev="";
 		for(int i=0; i<str.length(); ++i)
