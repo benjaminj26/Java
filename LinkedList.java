@@ -1,3 +1,9 @@
+/*
+	Java program to implement stack as linked list
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;
@@ -8,7 +14,7 @@ class Employee1{
 	String address;
 	String department;
 	Employee1 next;
-	
+
 	Employee1 push(Employee1 top){
 		Scanner sc = new Scanner(System.in);
 		Employee1 emp = new Employee1();
@@ -24,7 +30,7 @@ class Employee1{
 		emp.next = top;
 		return emp;
 	}
-	
+
 	Employee1 pop(Employee1 top) {
 		if(top.next != null) {
 			System.out.println("The details of the following employee is deleted");
@@ -36,7 +42,7 @@ class Employee1{
 		}
 		return top;
 	}
-	
+
 	void display() {
 		if(next != null){
 			System.out.println("Employee ID: " + empid);

@@ -1,3 +1,9 @@
+/*
+	Java program to demonstrate the use of command line arguments
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 public class CommandLineArgs {

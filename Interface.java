@@ -1,3 +1,9 @@
+/*
+	Java program to show the use case of an interface
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;
@@ -34,5 +40,5 @@ class Fish extends Animal implements Pet{
     }
 }
 
-public class Experiment8 {
+public class Interface {
 }

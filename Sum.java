@@ -1,3 +1,9 @@
+/*
+	Java program to find the sum of two numbers and concatenate two strings
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;

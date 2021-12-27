@@ -1,3 +1,9 @@
+/*
+	Java program to compare two given strings
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;

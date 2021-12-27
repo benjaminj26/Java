@@ -1,3 +1,9 @@
+/*
+	Java program to print the name of the month according to the number given by the user
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;

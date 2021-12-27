@@ -1,3 +1,9 @@
+/*
+	Java program to create a command line calculator
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 public class Calculator

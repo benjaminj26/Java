@@ -1,6 +1,7 @@
 /*
-    Author : Benjamin Joseph
-    Date : 07-12-2021
+	Java program to check whether a string is palindrome or not
+	Author : Benjamin Joseph
+	Date : 26-12-2021
 */
 
 package Java;

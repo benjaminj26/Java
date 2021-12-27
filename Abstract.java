@@ -1,3 +1,9 @@
+/*
+	Java program to show the use case of abstract classes
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Lab21;
 
 abstract class Shape{

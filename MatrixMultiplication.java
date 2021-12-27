@@ -1,8 +1,14 @@
+/*
+	Java program to multiply two matrices
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;
 
-public class MatMul {
+public class MatrixMultiplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

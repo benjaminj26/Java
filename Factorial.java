@@ -1,3 +1,9 @@
+/*
+	Java program to find the factorial of a number
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;

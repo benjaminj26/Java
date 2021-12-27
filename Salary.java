@@ -1,3 +1,9 @@
+/*
+	Java program to find the salary of an engineer and an employee by using inheritance
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Lab21;
 
 import java.util.Scanner;
@@ -19,7 +25,7 @@ class Engineer extends Employees{
 		this.hra = hra;
 		this.grossPay = bp + (bp*da/100) + (bp*hra/100);
 	}
-	void display() {		
+	void display() {
 		System.out.println("The name of the class is Engineer");
 	}
 	void calcSalary() {
@@ -30,7 +36,7 @@ class Engineer extends Employees{
 	}
 }
 
-public class Experiment6 {
+public class Salary {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

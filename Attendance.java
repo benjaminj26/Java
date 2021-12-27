@@ -1,3 +1,9 @@
+/*
+	Java program to assign grade based on the attendance percentage of a student
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;

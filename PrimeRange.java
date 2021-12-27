@@ -1,3 +1,9 @@
+/*
+	Java program to print the prime numbers in a given range
+	Author : Benjamin Joseph
+	Date : 26-12-2021
+*/
+
 package Java;
 
 import java.util.Scanner;
