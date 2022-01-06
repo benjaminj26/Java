@@ -39,7 +39,7 @@ class Customer{
 		int change = sc.nextInt();
 		try {
 			if(change <= 0)
-				throw new  InvalidAmountException("Amount is less than or equal to zero");
+				throw new  InvalidAmountException("\nAmount is less than or equal to zero");
 			else {
 				this.bankBalance += change;
 				System.out.println("The transaction has been finished successfully");
@@ -47,6 +47,8 @@ class Customer{
 		}
 		catch(InvalidAmountException e) {
 			System.out.println(e.getMessage());
+			System.out.println("Transaction Failed!!");
+			
 		}
 	}
 	void withdraw() {
@@ -54,8 +56,8 @@ class Customer{
 		System.out.print("Enter the amount to be withdrawn: ");
 		int change = sc.nextInt();
 		try {
-			if(change <= 0)
-				throw new InvalidAmountException("Amount is less than or equal to zero");
+			if(this.bankBalance - change < 2000)
+				throw new InvalidAmountException("\nMinimum balance amount is exceeded");
 			else {
 				this.bankBalance -= change;
 				System.out.println("The transaction has been finished successfully");
@@ -63,6 +65,7 @@ class Customer{
 		}
 		catch(InvalidAmountException e) {
 			System.out.println(e.getMessage());
+			System.out.println("Transaction failed!!");
 		}
 	}
 }
