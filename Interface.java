@@ -4,7 +4,7 @@
     Date : 06-01-2022
 */
 
-package Lab21;
+package Java;
 
 class Animal{
     int legs;
