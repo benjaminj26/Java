@@ -3,17 +3,22 @@ package Lab21;
 import java.util.Scanner;
 
 class  InvalidAmountException extends Exception{
+	String message;
 	public  InvalidAmountException(String s) {
-		super(s);
+		message = s;
+	}
+	public String getMessage() {
+		return message;
 	}
 }
 
 class Customer{
 	int accountNumber;
 	int bankBalance;
+	static int minimumBalance = 2000;
 	String name;
 	Customer(){
-		this.bankBalance = 0;
+		this.bankBalance = 2000;
 	}
 	void getDetails() {
 		Scanner sc = new Scanner(System.in);
@@ -41,7 +46,7 @@ class Customer{
 			}
 		}
 		catch(InvalidAmountException e) {
-			System.out.println("\nAmount is less than or equal to zero");
+			System.out.println(e.getMessage());
 		}
 	}
 	void withdraw() {
@@ -57,7 +62,7 @@ class Customer{
 			}
 		}
 		catch(InvalidAmountException e) {
-			System.out.println("\nAmount is less than or equal to zero");
+			System.out.println(e.getMessage());
 		}
 	}
 }
