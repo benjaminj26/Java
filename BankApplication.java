@@ -56,7 +56,7 @@ class Customer{
 		System.out.print("Enter the amount to be withdrawn: ");
 		int change = sc.nextInt();
 		try {
-			if(this.bankBalance - change < 2000)
+			if(this.bankBalance - change < minimumBalance)
 				throw new InvalidAmountException("\nMinimum balance amount is exceeded");
 			else {
 				this.bankBalance -= change;
