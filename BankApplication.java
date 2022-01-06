@@ -2,6 +2,12 @@ package Lab21;
 
 import java.util.Scanner;
 
+class  InvalidAmountException extends Exception{
+	public  InvalidAmountException(String s) {
+		super(s);
+	}
+}
+
 class Customer{
 	int accountNumber;
 	int bankBalance;
@@ -26,15 +32,33 @@ class Customer{
 		System.out.print("Enter the amount to be deposited: ");
 		Scanner sc = new Scanner(System.in);
 		int change = sc.nextInt();
-		this.bankBalance += change;
-		System.out.println("The transaction has been finished successfully");
+		try {
+			if(change <= 0)
+				throw new  InvalidAmountException("Amount is less than or equal to zero");
+			else {
+				this.bankBalance += change;
+				System.out.println("The transaction has been finished successfully");
+			}
+		}
+		catch(InvalidAmountException e) {
+			System.out.println("\nAmount is less than or equal to zero");
+		}
 	}
 	void withdraw() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the amount to be withdrawn: ");
 		int change = sc.nextInt();
-		this.bankBalance -= change;
-		System.out.println("The transaction has been finished successfully");
+		try {
+			if(change <= 0)
+				throw new InvalidAmountException("Amount is less than or equal to zero");
+			else {
+				this.bankBalance -= change;
+				System.out.println("The transaction has been finished successfully");
+			}
+		}
+		catch(InvalidAmountException e) {
+			System.out.println("\nAmount is less than or equal to zero");
+		}
 	}
 }
 
@@ -43,59 +67,64 @@ public class BankApplication {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		int size;
-		System.out.print("Enter the number of customers: ");
-		size = sc.nextInt();
-		Customer[] customers = new Customer[size];
-		for(int i=0; i<size; ++i) {
-			customers[i].getDetails();
-		}
+//		int size;
+//		System.out.print("Enter the number of customers: ");
+//		size = sc.nextInt();
+		Customer customers = new Customer();
+		customers.getDetails();
+//		for(int i=0; i<size; ++i) {
+//			customers[i].getDetails();
+//		}
 		do {
-			System.out.println("1.Display All Account Details");
+			System.out.println("\n1.Display All Account Details");
 			System.out.println("2.Search By Account Number");
 			System.out.println("3.Deposit Amount");
 			System.out.println("4.Withdraw");
 			System.out.println("5.Exit");
-			System.out.println("Enter your choice: ");
+			System.out.print("Enter your choice: ");
 			int choice;
 			choice = sc.nextInt();
 			switch(choice) {
 				case 1:
-					for(int i=0; i<size; ++i) {
-						customers[i].display();
-					}
-					break;
+					customers.display();
+//					for(int i=0; i<size; ++i) {
+//						customers[i].display();
+//					}
+//					break;
 				case 2:
-					System.out.print("Enter the Account Number: ");
-					int acc = sc.nextInt();
-					for(Customer x : customers) {
-						if(x.accountNumber == acc) {
-							x.display();
-						}
-					}
+//					System.out.print("Enter the Account Number: ");
+//					int acc = sc.nextInt();
+////					for(Customer x : customers) {
+////						if(x.accountNumber == acc) {
+////							x.display();
+////						}
+//					}
+					customers.display();
 					break;
 				case 3:
-					System.out.print("Enter the Account Number: ");
-					acc = sc.nextInt();
-					for(Customer x : customers) {
-						if(x.accountNumber == acc) {
-							x.deposit();
-						}
-					}
+//					System.out.print("Enter the Account Number: ");
+//					acc = sc.nextInt();
+//					for(Customer x : customers) {
+//						if(x.accountNumber == acc) {
+//							x.deposit();
+//						}
+//					}
+					customers.deposit();
 					break;
 				case 4:
-					System.out.print("Enter the Account Number: ");
-					acc = sc.nextInt();
-					for(Customer x : customers) {
-						if(x.accountNumber == acc) {
-							x.withdraw();
-						}
-					}
+//					System.out.print("Enter the Account Number: ");
+//					acc = sc.nextInt();
+//					for(Customer x : customers) {
+//						if(x.accountNumber == acc) {
+//							x.withdraw();
+//						}
+//					}
+					customers.withdraw();
 					break;
 				case 5:
+					sc.close();
 					System.exit(0);
 			}
 		}while(true);
 	}
-
 }
