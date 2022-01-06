@@ -16,7 +16,7 @@ public class Exceptions {
 			System.out.println(num1+"/"+num2+"="+result);
 		}
 		catch(ArithmeticException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Division by zero is not allowed");
 		}
 	}
 
