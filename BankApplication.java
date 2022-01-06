@@ -2,7 +2,7 @@ package Lab21;
 
 import java.util.Scanner;
 
-class  InvalidAmountException extends Exception{
+class  InvalidAmountException extends Exception {
 	String message;
 	public  InvalidAmountException(String s) {
 		message = s;
@@ -12,12 +12,12 @@ class  InvalidAmountException extends Exception{
 	}
 }
 
-class Customer{
+class Customer {
 	int accountNumber;
 	int bankBalance;
 	static int minimumBalance = 2000;
 	String name;
-	Customer(){
+	Customer() {
 		this.bankBalance = 2000;
 	}
 	void getDetails() {
