@@ -6,28 +6,28 @@
 
 package Java;
 
-class Animal{
+class Animal {
     int legs;
     String name;
-    Animal(int legs){
+    Animal(int legs) {
         this.legs = legs;
     }
-    void walk(){
+    void walk() {
         System.out.println("This animal walks on "+legs+" legs");
     }
-    void eat(){
+    void eat() {
         System.out.println("Eating");
     }
 }
 
-interface Pet{
+interface Pet {
     String getName();
     void setName(String name);
     void play();
 }
 
-class Spider extends Animal{
-    Spider(int legs){
+class Spider extends Animal {
+    Spider(int legs) {
         super(legs);
     }
     void eat() {
@@ -35,8 +35,8 @@ class Spider extends Animal{
     }
 }
 
-class Cat extends Animal implements Pet{
-	Cat(int legs, String name){
+class Cat extends Animal implements Pet {
+	Cat(int legs, String name) {
 		super(legs);
 		this.name = name;
 	}
@@ -54,8 +54,8 @@ class Cat extends Animal implements Pet{
 	}
 }
 
-class Fish extends Animal implements Pet{
-    Fish(int legs, String name){
+class Fish extends Animal implements Pet {
+    Fish(int legs, String name) {
         super(legs);
         this.name = name;
     }

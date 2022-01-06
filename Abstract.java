@@ -31,7 +31,6 @@ class Hexagon{
 public class Abstract {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Rectangle rectangle = new Rectangle();
 		Triangle triangle = new Triangle();
 		Hexagon hexagon = new Hexagon();

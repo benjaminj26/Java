@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class MatrixMultiplication {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 
 		//First Matrix
@@ -35,15 +34,11 @@ public class MatrixMultiplication {
 		matrix2 = MatrixInput(row2,col2,matrix2);
 
 		//Matrix Multiplication Algorithm
-		if(col1 == row2)
-		{
+		if(col1 == row2) {
 			int[][] matrix3 = new int[row1][col2];
-			for(int i=0; i<row1; ++i)
-			{
-				for(int j=0; j<col2; ++j)
-				{
-					for(int k=0; k<col1; ++k)
-					{
+			for(int i=0; i<row1; ++i) {
+				for(int j=0; j<col2; ++j) {
+					for(int k=0; k<col1; ++k) {
 						matrix3[i][j] += matrix1[i][k] * matrix2[k][j];
 					}
 				}
@@ -56,13 +51,10 @@ public class MatrixMultiplication {
 	}
 
 	//Function for reading the matrices
-	public static int[][] MatrixInput(int row, int col, int[][] mat)
-	{
+	public static int[][] MatrixInput(int row, int col, int[][] mat) {
 		Scanner sc = new Scanner(System.in);
-		for(int i=0; i<row; ++i)
-		{
-			for(int j=0; j<col; ++j)
-			{
+		for(int i=0; i<row; ++i) {
+			for(int j=0; j<col; ++j) {
 				mat[i][j] = sc.nextInt();
 			}
 		}
@@ -70,16 +62,12 @@ public class MatrixMultiplication {
 	}
 
 	//Function for printing the matrices
-	public static void MatrixDisplay(int row, int col, int[][] mat)
-	{
-		for(int i=0; i<row; ++i)
-		{
-			for(int j=0; j<col; ++j)
-			{
+	public static void MatrixDisplay(int row, int col, int[][] mat) {
+		for(int i=0; i<row; ++i) {
+			for(int j=0; j<col; ++j) {
 				System.out.print(mat[i][j]+" ");
 			}
 			System.out.println();
 		}
 	}
-
 }

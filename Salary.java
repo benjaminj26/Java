@@ -8,7 +8,7 @@ package Lab21;
 
 import java.util.Scanner;
 
-class Employees{
+class Employees {
 	int basePay,da,hra,grossPay;
 	void display() {
 		System.out.println("The name of this class is Employee");
@@ -18,8 +18,8 @@ class Employees{
 	}
 }
 
-class Engineer extends Employees{
-	Engineer(int bp, int da, int hra){
+class Engineer extends Employees {
+	Engineer(int bp, int da, int hra) {
 		this.basePay = bp;
 		this.da = da;
 		this.hra = hra;
@@ -37,9 +37,7 @@ class Engineer extends Employees{
 }
 
 public class Salary {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int bp,da,hra,gp;
 		System.out.print("Enter the Base pay: ");

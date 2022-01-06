@@ -30,9 +30,7 @@ class Manager extends Employee{
 }
 
 public class Inheritance {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		Officer off = new Officer();
 		Manager man = new Manager();

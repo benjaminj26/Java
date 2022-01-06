@@ -18,8 +18,7 @@ public class Month_Day {
 		month = month.toLowerCase();
 		System.out.println("Input the year: ");
 		year = sc.nextInt();
-		if(isLeapYear(year))
-		{
+		if(isLeapYear(year)) {
 			switch(month) {
 				case "january": System.out.println("31");
 				case "march": System.out.println("31");
@@ -39,8 +38,7 @@ public class Month_Day {
 				default:System.out.println("Invalid Input");
 			}
 		}
-		else
-		{
+		else {
 			switch(month) {
 				case "january": System.out.println("31");
 				case "march": System.out.println("31");
@@ -63,12 +61,9 @@ public class Month_Day {
 		sc.close();
 	}
 
-	static boolean isLeapYear(int year)
-	{
-		if(year%4 == 0 )
-		{
-			if(year%100 == 0)
-			{
+	static boolean isLeapYear(int year) {
+		if(year%4 == 0 ) {
+			if(year%100 == 0) {
 				if(year%400 == 0)
 					return true;
 				else

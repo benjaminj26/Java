@@ -8,35 +8,29 @@ package Java;
 
 import java.util.Scanner;
 
-class Person
-{
+class Person {
     String name, gender;
     int age;
 }
 
-class Employee extends Person
-{
+class Employee extends Person {
     String department;
     int empid;
 
-    Employee(String name, int age, String gender, String department, int empid)
-    {
+    Employee(String name, int age, String gender, String department, int empid) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.department = department;
         this.empid = empid;
     }
-    void show()
-    {
+    void show() {
         System.out.println("Name: "+name+"\nAge: "+age+"\nGender: "+gender+"\nDepartment: "+department+"\nEmployee ID: "+empid);
     }
 }
 
-public class Inherit
-{
-    public static void main(String[] args)
-    {
+public class Inherit {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String name, gender, department;
         int age, empid;

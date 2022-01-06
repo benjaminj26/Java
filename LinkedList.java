@@ -8,14 +8,14 @@ package Java;
 
 import java.util.Scanner;
 
-class Employee1{
+class Employee1 {
 	int empid;
 	String name;
 	String address;
 	String department;
 	Employee1 next;
 
-	Employee1 push(Employee1 top){
+	Employee1 push(Employee1 top) {
 		Scanner sc = new Scanner(System.in);
 		Employee1 emp = new Employee1();
 		System.out.print("Enter the Employee ID: ");
@@ -37,20 +37,20 @@ class Employee1{
 			top.display();
 			top = top.next;
 		}
-		else{
+		else {
 			System.out.println("The stack is Empty");
 		}
 		return top;
 	}
 
 	void display() {
-		if(next != null){
+		if(next != null) {
 			System.out.println("Employee ID: " + empid);
 			System.out.println("Name: " + name);
 			System.out.println("Address: " + address);
 			System.out.println("Department: " + department);
 		}
-		else{
+		else {
 			System.out.println("Stack is Empty");
 		}
 	}
@@ -59,7 +59,6 @@ class Employee1{
 public class LinkedList {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		Employee1 top = new Employee1();
 		top.next = null;

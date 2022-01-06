@@ -48,7 +48,7 @@ class Customer{
 		catch(InvalidAmountException e) {
 			System.out.println(e.getMessage());
 			System.out.println("Transaction Failed!!");
-			
+
 		}
 	}
 	void withdraw() {
@@ -73,7 +73,6 @@ class Customer{
 public class BankApplication {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 //		int size;
 //		System.out.print("Enter the number of customers: ");
