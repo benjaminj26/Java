@@ -1,5 +1,5 @@
 /*
-	Java program to create a bank Bank Application
+	Java program to create a Bank Application
 	Author : Benjamin Joseph
 	Date : 06-01-2022
 */
