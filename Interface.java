@@ -1,3 +1,9 @@
+/*
+    Program to demonstrate multiple inheritance in Java
+    Author : Benjamin Joseph
+    Date : 06-01-2022
+*/
+
 package Lab21;
 
 class Animal{
@@ -80,7 +86,7 @@ public class Interface {
 		System.out.println("This fish's name is "+fish.getName());
 		fish.play();
 		System.out.println();
-		
+
 		Cat cat = new Cat(4, "Fluffy");
 		System.out.println("This cat's name is "+cat.getName());
 		cat.eat();
@@ -89,7 +95,7 @@ public class Interface {
 		System.out.println("This cat's name is "+cat.getName());
 		cat.play();
 		System.out.println();
-		
+
 		Spider spider = new Spider(8);
 		spider.eat();
 		spider.walk();
