@@ -32,6 +32,7 @@ public class InfixToPostfix {
             }
             else if(priority(ch) <= priority(stack[top])) {
                while(priority(ch) <= priority(stack[top])) {
+                   System.out.print(stack[top]);
                    top = pop(stack,top);
                    if(top == -1) {
                         break;
@@ -41,6 +42,7 @@ public class InfixToPostfix {
             }
             if(i == size-1) {
                 while(top >= 0) {
+                    System.out.print(stack[top]);
                     top = pop(stack,top);
                 }
             }
@@ -53,7 +55,6 @@ public class InfixToPostfix {
     }
 
     static int pop(char[] stack, int top) {
-        System.out.print(stack[top]);
         top--;
         return top;
     }
