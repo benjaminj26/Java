@@ -14,23 +14,30 @@ public class InfixToPostfix {
         System.out.println("Enter the Infix expression: ");
         String expression = sc.nextLine();
         int size = expression.length();
-        char[] stack = new char[size-1];
+        char[] stack = new char[size/2+1];
         int top = -1;
+        System.out.println("The expression you entered is "+expression);
         for(int i=0; i<size; ++i) {
             char ch = expression.charAt(i);
             if(priority(ch) == -1) {
                 System.out.print(ch);
             }
+            else if(ch == ')') {
+                while(stack[top] != '(') {
+                    top = pop(stack, top);
+                }
+            }
             else if(top == -1 || priority(ch) > priority(stack[top])) {
                 top = push(ch,stack,top);
             }
             else if(priority(ch) <= priority(stack[top])) {
-                while(priority(ch) <= priority(stack[top])) {
-                    top = pop(stack,top);
-                    if(top == 0)
+               while(priority(ch) <= priority(stack[top])) {
+                   top = pop(stack,top);
+                   if(top == -1) {
                         break;
-                }
-                top = push(ch,stack,top);
+                   }
+               }
+               top = push(ch,stack,top);
             }
             if(i == size-1) {
                 while(top >= 0) {
