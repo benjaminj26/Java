@@ -24,8 +24,10 @@ public class InfixToPostfix {
             }
             else if(ch == ')') {
                 while(stack[top] != '(') {
+                    System.out.print(stack[top]);
                     top = pop(stack, top);
                 }
+                top = pop(stack,top);
             }
             else if(top == -1 || priority(ch) > priority(stack[top])) {
                 top = push(ch,stack,top);
