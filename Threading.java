@@ -6,8 +6,6 @@
 
 package Java;
 
-import java.util.Scanner;
-
 class ClassA extends Thread {
     public void run() {
         for(int i = 0; i<20; ++i) {
@@ -26,8 +24,6 @@ class ClassB extends Thread {
 
 public class Threading {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int upp = sc.nextInt();
         ClassA a = new ClassA();
         ClassB b = new ClassB();
         a.start();
