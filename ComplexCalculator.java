@@ -166,7 +166,10 @@ public class ComplexCalculator implements ActionListener{
 			}
 			else if(str[i].equals("/")) {
 				try {
-					result /= Float.parseFloat(str[++i]);
+					if(Float.parseFloat(str[++i]) == 0)
+						throw new ArithmeticException("/ by 0 not allowed");
+					else
+					 result /= Float.parseFloat(str[i]);
 				}
 				catch(ArithmeticException e) {
 					text.setText(e.getMessage());
@@ -174,7 +177,10 @@ public class ComplexCalculator implements ActionListener{
 			}
 			else if(str[i].equals("%")) {
 				try {
-					result %= Float.parseFloat(str[++i]);
+					if(Float.parseFloat(str[++i]) == 0)
+						throw new ArithmeticException("/ by 0 not allowed");
+					else
+						result %= Float.parseFloat(str[i]);
 				}
 				catch(ArithmeticException e) {
 					text.setText(e.getMessage());
