@@ -21,7 +21,8 @@ public class ComplexCalculator implements ActionListener{
 	JButton button14 = new JButton("%");
 	JButton button15 = new JButton("=");
 	JButton button16 = new JButton("0");
-	JButton button17 = new JButton("C");
+	JButton button17 = new JButton(".");
+	JButton button18 = new JButton("C");
 	public ComplexCalculator() {
 		JFrame frame = new JFrame("Complex Calculator");
 		frame.setSize(640,480);
@@ -62,7 +63,9 @@ public class ComplexCalculator implements ActionListener{
 		button16.addActionListener(this);
 		button16.setBounds(250,230,50,30);
 		button17.addActionListener(this);
-		button17.setBounds(175,260,50,30);
+		button17.setBounds(150,260,50,30);
+		button18.addActionListener(this);
+		button18.setBounds(200,260,50,30);
 		panel.add(button1);
 		panel.add(button2);
 		panel.add(button3);
@@ -80,6 +83,7 @@ public class ComplexCalculator implements ActionListener{
 		panel.add(button15);
 		panel.add(button16);
 		panel.add(button17);
+		panel.add(button18);
 		frame.setContentPane(panel);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -137,6 +141,9 @@ public class ComplexCalculator implements ActionListener{
 			text.setText(text.getText()+"0");
 		}
 		else if(e.getSource() == button17) {
+			text.setText(text.getText()+".");
+		}
+		else if(e.getSource() == button18) {
 			text.setText("");
 		}
 	}
@@ -149,32 +156,28 @@ public class ComplexCalculator implements ActionListener{
 				result += Integer.parseInt(str[i]);
 			}
 			else if(str[i].equals("+")) {
-				result += Integer.parseInt(str[++i]);
+				result += Float.parseFloat(str[++i]);
 			}
 			else if(str[i].equals("-")) {
-				result -= Integer.parseInt(str[++i]);
+				result -= Float.parseFloat(str[++i]);
 			}
 			else if(str[i].equals("*")) {
-				result *= Integer.parseInt(str[++i]);
+				result *= Float.parseFloat(str[++i]);
 			}
 			else if(str[i].equals("/")) {
 				try {
-					if(Integer.parseInt(str[++i]) != 0) {
-						result /= Integer.parseInt(str[i]);
-					}
+					result /= Float.parseFloat(str[++i]);
 				}
 				catch(ArithmeticException e) {
-					text.setText("Division By 0 is not Allowed");
+					text.setText(e.getMessage());
 				}
 			}
 			else if(str[i].equals("%")) {
 				try {
-					if(Integer.parseInt(str[++i]) != 0) {
-						result %= Integer.parseInt(str[i]);
-					}
+					result %= Float.parseFloat(str[++i]);
 				}
 				catch(ArithmeticException e) {
-					text.setText("Division By 0 is not Allowed");
+					text.setText(e.getMessage());
 				}
 			}
 			
