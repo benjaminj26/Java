@@ -22,6 +22,7 @@ public class SimpleCalculator implements ActionListener{
 		add.addActionListener(this);
 		sub.addActionListener(this);
 		panel.add(label1);
+		panel.add(text1);
 		panel.add(label2);
 		panel.add(text2);
 		panel.add(add);
