@@ -1,4 +1,4 @@
-package Lab21;
+package Java;
 
 import javax.swing.*;
 import java.awt.*;
