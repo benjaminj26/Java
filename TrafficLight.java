@@ -76,8 +76,9 @@ public class TrafficLight {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Traffic Light");
 		frame.setSize(640,480);
+		frame.setLayout(null);
 		GUITrafficLight gtf = new GUITrafficLight();
-		frame.setContentPane(gtf);
+		frame.add(gtf);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
