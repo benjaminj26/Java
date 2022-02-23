@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class StudentRecord implements ActionListener {
 	
-	static int stdid, age;
+	static int stdin, age;
 	static String stdname, branch;
 	static char batch;
 	JTextField text1, text2, text3, text4, text5;
@@ -28,7 +28,7 @@ public class StudentRecord implements ActionListener {
 		text4 = new JTextField();
 		text5 = new JTextField();
 		
-		label1 = new JLabel("StdID");
+		label1 = new JLabel("stdin");
 		label2 = new JLabel("StdName");
 		label3 = new JLabel("StdAge");
 		label4 = new JLabel("Branch");
@@ -67,32 +67,55 @@ public class StudentRecord implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == button1) {
-			stdid = Integer.parseInt(text1.getText());
+			stdin = Integer.parseInt(text1.getText());
 			stdname = text2.getText();
 			age = Integer.parseInt(text3.getText());
 			branch = text4.getText();
 			batch = text5.getText().charAt(0);
+			try {
+				Connection conn;
+				String userName = "bin";
+				String password = "paayal";
+				String url = "jdbc:mysql://localhost/bin";
+				conn = DriverManager.getConnection(url, userName, password);
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				System.out.println("Connection Established");
+				Statement stmt= conn.createStatement();
+				String sql="insert into "+
+							"student" + " values"+
+						"("+stdin+","+"\""+stdname+"\","+age+",\""+branch+"\""+",\""+batch+"\""+")";
+				stmt.executeUpdate(sql);
+			}
+			catch(SQLException | ClassNotFoundException e1) {
+				System.out.println(e1.getMessage());
+			}	
+		}else if(e.getSource() == button2) {
+			text1.setText(null);
+			text2.setText(null);
+			text3.setText(null);
+			text4.setText(null);
+			text5.setText(null);
 		}
 	}
 	
-	private static void writeTable(String tName, Connection conn) throws SQLException {
-		Statement stmt= conn.createStatement();
-		String sql="insert into "+
-					"paayal" + " values"+
-				"("+stdid+",\""+""\"stdname\"+"\","+age+",\""+branch+"\"+"batch"\")";
-		stmt.executeUpdate(sql);
-	}
-	
-	private static Connection establishConnection() throws SQLException, ClassNotFoundException {
-		Connection conn;
-		String userName = "bin";
-		String password = "paayal";
-		String url = "jdbc:mysql://localhost/bin";
-		conn = DriverManager.getConnection(url, userName, password);
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		System.out.println("Connection Established");
-		return conn;		
-		
-	}	
+//	private static void writeTable(String tName, Connection conn) throws SQLException {
+//		Statement stmt= conn.createStatement();
+//		String sql="insert into "+
+//					"student" + " values"+
+//				"("+stdin+","+"\""+stdname+"\""+age+"\""+"\""+branch+"\""+"\""+batch+"\""+")";
+//		stmt.executeUpdate(sql);
+//	}
+//	
+//	private static Connection establishConnection() throws SQLException, ClassNotFoundException {
+//		Connection conn;
+//		String userName = "bin";
+//		String password = "paayal";
+//		String url = "jdbc:mysql://localhost/bin";
+//		conn = DriverManager.getConnection(url, userName, password);
+//		Class.forName("com.mysql.cj.jdbc.Driver");
+//		System.out.println("Connection Established");
+//		return conn;		
+//		
+//	}	
 
 }
