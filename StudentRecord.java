@@ -97,25 +97,4 @@ public class StudentRecord implements ActionListener {
 			text5.setText(null);
 		}
 	}
-	
-//	private static void writeTable(String tName, Connection conn) throws SQLException {
-//		Statement stmt= conn.createStatement();
-//		String sql="insert into "+
-//					"student" + " values"+
-//				"("+stdin+","+"\""+stdname+"\""+age+"\""+"\""+branch+"\""+"\""+batch+"\""+")";
-//		stmt.executeUpdate(sql);
-//	}
-//	
-//	private static Connection establishConnection() throws SQLException, ClassNotFoundException {
-//		Connection conn;
-//		String userName = "bin";
-//		String password = "paayal";
-//		String url = "jdbc:mysql://localhost/bin";
-//		conn = DriverManager.getConnection(url, userName, password);
-//		Class.forName("com.mysql.cj.jdbc.Driver");
-//		System.out.println("Connection Established");
-//		return conn;		
-//		
-//	}	
-
 }
