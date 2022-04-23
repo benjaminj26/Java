@@ -36,17 +36,34 @@ public class QuickSort {
         int end = upp;
         int pivot = array[low];
 
-        while(array[start] <= pivot && start < end) {
-            start++;
+        while(start < end) {
+            
+            while(start <= upp && array[start] <= pivot) {
+                start++;
+            }
+
+            while(end >= low && array[end] > pivot) {
+                end--;
+            }
+
+            if(start > upp) {
+                start = upp;
+            }
+
+            if(end < low) {
+                end = low;
+            }
+
+            if(start < end) {
+                swap(array, start, end);
+            }
         }
-        while(array[end] > pivot) {
-            end--;
+
+        if(start == end && array[end] <= pivot) {
+            swap(array, end, low);
         }
-        if(start < end) {
-            swap(array, start, end);
-        }
-        else {
-                swap(array, end, low);
+        else if(start > end) {
+            swap(array, end, low);
         }
         return end;
     }
