@@ -2,7 +2,7 @@ import 	java.sql.*;
 import java.util.Scanner;
 
 public class MyDBf1 {
-	
+
 	static Connection conn;
 	public static void main(String[] args) throws SQLException {
 		Scanner sc = new Scanner(System.in);
@@ -14,22 +14,22 @@ public class MyDBf1 {
 			System.out.println("5.Delete");
 			System.out.println("6.Exit");
 			System.out.print("Enter your choice: ");
-			
+
 			int choice = sc.nextInt();
 			sc.nextLine();
-				
+
 				switch(choice) {
-				case 1: 
+				case 1:
 					System.out.println("Enter the name of the table: ");
 					String tName = sc.nextLine();
 					createTable(tName, establishConnection());
 					break;
-				case 2: 
+				case 2:
 					System.out.println("Enter the name of the table: ");
 					tName = sc.nextLine();
 					writeTable(tName, establishConnection());
 					break;
-				case 3: 
+				case 3:
 					System.out.println("Enter the name of the table: ");
 					tName = sc.nextLine();
 					readTable(tName, establishConnection());
@@ -41,7 +41,7 @@ public class MyDBf1 {
 			}
 		}while(true);
 	}
-	
+
 	private static void createTable(String tName, Connection conn) throws SQLException {
 		Statement stmt= conn.createStatement();
 		String sql="create table " +
@@ -53,7 +53,7 @@ public class MyDBf1 {
 				"primary key (stdid))";
 		stmt.executeUpdate(sql);
 	}
-	
+
 	private static void writeTable(String tName, Connection conn) throws SQLException {
 		Statement stmt= conn.createStatement();
 		System.out.print("Enter the stdid:");
@@ -72,7 +72,7 @@ public class MyDBf1 {
 				"("+stdid+",\""+stdn+"\","+marks+",\""+grade+"\")";
 		stmt.executeUpdate(sql);
 	}
-	
+
 	private static void readTable(String tName,Connection conn) throws SQLException {
 		Statement stmt= conn.createStatement();
 		String sql="select * from "+tName;
@@ -88,7 +88,7 @@ public class MyDBf1 {
             System.out.println(e);
 		}
 	}
-	
+
 	private static Connection establishConnection() {
 		try {
 			String userName = "bin";
@@ -102,7 +102,5 @@ public class MyDBf1 {
 			System.out.println(e);
 			return conn;
 		}
-		
-	}	
-
+	}
 }
